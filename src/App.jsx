@@ -33,11 +33,20 @@ const App = () => {
   }
 
   return (
-    <main>
-      <h1>Burger Stacker</h1>
-      <section>
-        <IngredientList addToBurger={addToBurger} availableIngredients={availableIngredients} />
-        <BurgerStack stack={stack} removeFromBurger={removeFromBurger} />
+<main style={{ display: "flex", justifyContent: "space-around", alignItems: "flex-start" }}>
+      <section style={{ width: "40%"}}>
+        <h2>Ingredients</h2>
+        <IngredientList
+          availableIngredients={availableIngredients}
+          addToBurger={addToBurger}
+        />
+      </section>
+      <section style={{ width: "40%"}}>
+        <h2>Burger Stacker</h2>
+        <BurgerStack
+          stack={stack}
+          removeFromBurger={removeFromBurger}
+        />
       </section>
     </main>
   );

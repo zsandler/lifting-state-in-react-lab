@@ -4,7 +4,6 @@ import React from 'react'
 const IngredientList = ({ availableIngredients, addToBurger }) => {
     return (
         <ul>
-
             {availableIngredients.map((ingredient, idx) => (
                 <li key={idx}>
                     <div>
